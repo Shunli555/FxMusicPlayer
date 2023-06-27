@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+      prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.shunli.fxmusicplayer.MainController" stylesheets="@style/main.css">
+    <ScrollPane prefHeight="500.0" prefWidth="182.0" fx:id="leftList" styleClass="leftList" fitToHeight="true"
+                fitToWidth="true">
+        <VBox>
+            <padding>
+                <Insets top="64" left="8" right="8"/>
+            </padding>
+            <VBox alignment="CENTER" style="-fx-background-color:transparent">
+                <ImageView preserveRatio="true" fx:id="headerImg">
+
+                </ImageView>
+                <Label text="Username" textFill="white">
+                    <VBox.margin>
+                        <Insets top="21"/>
+                    </VBox.margin>
+                </Label>
+            </VBox>
+            <HBox styleClass="left-item">
+                <VBox.margin>
+                    <Insets top="60"/>
+                </VBox.margin>
+                <Label text="本地音乐" styleClass="left-label"/>
+            </HBox>
+            <HBox styleClass="left-item">
+                <Label text="我的收藏" styleClass="left-label"/>
+            </HBox>
+            <Label text="所有歌单" styleClass="left-label">
+                <VBox.margin>
+                    <Insets top="12" left="20"/>
+                </VBox.margin>
+            </Label>
+        </VBox>
+    </ScrollPane>
+    <VBox prefHeight="500.0" prefWidth="628.0" HBox.hgrow="ALWAYS">
+        <HBox prefHeight="37.0" prefWidth="628.0" fx:id="toolbar" alignment="CENTER_LEFT" styleClass="top-bar">
+            <ImageView styleClass="icon-button" fx:id="back">
+                <Image url="@images/back.png"/>
+                <HBox.margin>
+                    <Insets left="40"/>
+                </HBox.margin>
+            </ImageView>
+            <ImageView styleClass="icon-button" fx:id="next">
+                <Image url="@images/next.png"/>
+                <HBox.margin>
+                    <Insets left="50"/>
+                </HBox.margin>
+            </ImageView>
+            <HBox styleClass="search-bg" maxHeight="20">
+                <HBox.margin>
+                    <Insets left="110"/>
+                </HBox.margin>
+                <ImageView>
+
+                </ImageView>
+                <TextField fx:id="searchBox" styleClass="search-box"/>
+            </HBox>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <ImageView styleClass="icon-button" fx:id="minus">
+                <HBox.margin>
+                    <Insets right="41"/>
+                </HBox.margin>
+                <Image url="@images/minus.png"/>
+            </ImageView>
+            <ImageView styleClass="icon-button" fx:id="max">
+                <HBox.margin>
+                    <Insets right="41"/>
+                </HBox.margin>
+                <Image url="@images/maximize-2.png"/>
+            </ImageView>
+            <ImageView styleClass="icon-button" fx:id="close">
+                <HBox.margin>
+                    <Insets right="52"/>
+                </HBox.margin>
+                <Image url="@images/x.png"/>
+            </ImageView>
+        </HBox>
+        <ListView prefWidth="628" prefHeight="30" VBox.vgrow="ALWAYS" fx:id="musicList" styleClass="musicList"/>
+        <VBox prefHeight="60" styleClass="bottom-controller" fx:id="controller">
+            <HBox>
+                <ImageView/>
+            </HBox>
+        </VBox>
+    </VBox>
+</HBox>
